@@ -23,7 +23,7 @@ class ConvolutionReverb(walkman.ModuleWithDecibel):
 
         self._balance_signal_to = pyo.SigTo(1)
         try:
-            pyo_input = self.input_provider[0]
+            pyo_input = self.input_provider.audio_input_list[0]
         except IndexError:
             warnings.warn(
                 f"Found no audio inputs! Using {self.get_name()} module is useless "
@@ -56,7 +56,7 @@ class ConvolutionReverb(walkman.ModuleWithDecibel):
         super()._initialise(decibel=decibel)
 
         try:
-            pyo_input = self.input_provider[input_index]
+            pyo_input = self.input_provider.audio_input_list[input_index]
         except IndexError:
             warnings.warn(
                 f"There is no input with input_index = '{input_index}'!"
