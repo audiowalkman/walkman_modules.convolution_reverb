@@ -16,7 +16,7 @@ class InvalidInputIndexWarning(Warning):
 class ConvolutionReverb(walkman.ModuleWithDecibel):
     """"""
 
-    impulse_path: str
+    impulse_path: str = ""
 
     def setup_pyo_object(self):
         super().setup_pyo_object()
