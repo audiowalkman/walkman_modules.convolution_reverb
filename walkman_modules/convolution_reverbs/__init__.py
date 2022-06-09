@@ -37,15 +37,9 @@ class ConvolutionReverb(walkman.ModuleWithDecibel):
             bal=self._balance_signal_to,
         ).stop()
 
-    def _play(self, duration: float = 0, delay: float = 0):
-        super()._play(duration, delay)
-        self._convolution_reverb.play(dur=duration, delay=delay)
-        self._balance_signal_to.play(dur=duration, delay=delay)
-
-    def _stop(self, wait: float = 0):
-        super()._stop(wait)
-        self._convolution_reverb.stop(wait=wait)
-        self._balance_signal_to.stop(wait=wait)
+        self.interal_pyo_object_list.extend(
+            [self._convolution_reverb, self._balance_signal_to]
+        )
 
     def _initialise(
         self,

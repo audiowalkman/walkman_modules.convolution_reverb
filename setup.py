@@ -1,6 +1,6 @@
 import setuptools  # type: ignore
 
-MAJOR, MINOR, PATCH = 0, 1, 2
+MAJOR, MINOR, PATCH = 0, 2, 0
 VERSION = f"{MAJOR}.{MINOR}.{PATCH}"
 """This project uses semantic versioning.
 See https://semver.org/
@@ -30,7 +30,7 @@ setuptools.setup(
     setup_requires=[],
     install_requires=[
         # core package
-        "audiowalkman>=0.7.0, <1.0.0",
+        "audiowalkman>=0.8.0, <1.0.0",
         # for audio
         "pyo==1.0.4",
     ],
