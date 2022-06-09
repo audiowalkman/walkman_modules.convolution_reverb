@@ -37,7 +37,7 @@ class ConvolutionReverb(walkman.ModuleWithDecibel):
             bal=self._balance_signal_to,
         ).stop()
 
-        self.interal_pyo_object_list.extend(
+        self.internal_pyo_object_list.extend(
             [self._convolution_reverb, self._balance_signal_to]
         )
 
