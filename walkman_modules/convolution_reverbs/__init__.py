@@ -13,7 +13,7 @@ class InvalidInputIndexWarning(Warning):
 
 
 @dataclasses.dataclass
-class ConvolutionReverb(walkman.ModuleWithDecibel):
+class ConvolutionReverb(walkman.ModuleWithDecibelControlledAutoStartStop):
     """"""
 
     impulse_path: str = ""
